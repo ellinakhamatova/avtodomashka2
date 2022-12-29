@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/avtodomashka/static/css/main.02cd729a.css",
+    "main.js": "/avtodomashka/static/js/main.8c22a03b.js",
+    "static/js/787.66cb4309.chunk.js": "/avtodomashka/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/avtodomashka/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/avtodomashka/index.html",
+    "main.02cd729a.css.map": "/avtodomashka/static/css/main.02cd729a.css.map",
+    "main.8c22a03b.js.map": "/avtodomashka/static/js/main.8c22a03b.js.map",
+    "787.66cb4309.chunk.js.map": "/avtodomashka/static/js/787.66cb4309.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02cd729a.css",
+    "static/js/main.8c22a03b.js"
+  ]
+}
