@@ -3,8 +3,8 @@ import Affairs from './affairs/Affairs'
 import s2 from '../../s1-main/App.module.css'
 
 /*
-* 1 - описать типы AffairPriorityType, AffairType
-* 2 - указать нужный тип для defaultAffairs
+* 1 - описать типы AffairPriorityType, AffairType - done
+* 2 - указать нужный тип для defaultAffairs - done?
 * 3 - дописать типы и логику функции filterAffairs и проверить её тестами
 * 4 - выполнить пункт 3 для функции deleteAffair
 * 5 - указать нужный тип в useState с affairs
@@ -26,7 +26,7 @@ export type AffairType = {
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: Array<AffairType>  = [
+const defaultAffairs: Array<AffairType> = [
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -35,12 +35,16 @@ const defaultAffairs: Array<AffairType>  = [
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => { // need to fix any
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType>   => { // need to fix any
+    if(filter === 'all') {
+       return affairs;
+    } // выход из функции
 
-
-    return affairs // need to fix
+    const result = affairs.filter((task) => task.priority === filter) // all
+    return result
 }
-export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
+
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
 
     return affairs // need to fix
 }
@@ -50,6 +54,7 @@ function HW2() {
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
+
     const deleteAffairCallback = (_id: number) => { // need to fix any
         // need to fix
     }

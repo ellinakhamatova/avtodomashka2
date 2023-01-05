@@ -21,7 +21,7 @@ function Affairs(props: AffairsPropsType) {
         // need to fix
     }
     const setLow = () => {
-        // need to fix
+        props.setFilter('low')
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
